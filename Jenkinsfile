@@ -3,7 +3,7 @@ pipeline{
     environment {
         // SCANNER_HOME=tool 'sonar-scanner'
         TMDB_V3_API_KEY = credentials('tmdb-api-key')
-        IMAGE_NAME = "sushmaagowdaa/netflix" // Name of the image created in Jenkins
+        IMAGE_NAME = "baannnuuuu/netflix" // Name of the image created in Jenkins
         CONTAINER_NAME = "netflix" // Name of the container created in Jenkins
     }
     stages {
@@ -14,7 +14,7 @@ pipeline{
         }
         stage('Checkout from Git'){
             steps{
-                git 'https://github.com/Sushmaa123/DevSecOps-Project.git'
+                git 'https://github.com/Banupriyasangankal/DevSecOps-Project.git'
             }
         }
         stage("Sonarqube Analysis "){
@@ -94,7 +94,7 @@ post {
             body: "Project: ${env.JOB_NAME}<br/>" +
                 "Build Number: ${env.BUILD_NUMBER}<br/>" +
                 "URL: ${env.BUILD_URL}<br/>",
-            to: 'your-mail@gmail.com',                               
+            to: 'banupriyasangankal@gmaail.com',                               
             attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
         }
     }
